@@ -10,30 +10,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let book of books" [ngClass]="{'clearence':book.clearance}">
             <td><img [src]="book.image" [alt]="book.name"/></td>
-            <td>{{book.name}}</td>
+            <td>{{book.name | uppercase}}</td>
             <td>{{book.autor}}</td>
             <td>{{book.genere}}</td>
-            <td>{{book.price}}</td>
-            <td>{{book.stock}}</td>
+            <td>{{book.price | currency}}</td>
+            <td *ngIf="book.stock==0" class="badge badge-danger">SIN STOCK</td>
+            <td *ngIf="book.stock!=0">{{book.stock}}</td>
         </tr>
-        <tr>
-            <td><img [src]="book.image" [alt]="book.name"/></td>
-            <td>{{book.name}}</td>
-            <td>{{book.autor}}</td>
-            <td>{{book.genere}}</td>
-            <td>{{book.price}}</td>
-            <td>{{book.stock}}</td>
-        </tr>
-        <tr>
-            <td><img [src]="book.image" [alt]="book.name"/></td>
-            <td>Libro 3</td>
-            <td>Autor 3</td>
-            <td>Género 3</td>
-            <td>3000</td>
-            <td>5</td>
-        </tr>
+      
     </tbody>    
 </table>
 
