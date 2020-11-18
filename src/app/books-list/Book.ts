@@ -6,4 +6,5 @@ export interface Book{
     stock :number;
     image : string
     clearance: boolean;
+    quantity : 0,
 }
