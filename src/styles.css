@@ -1,1 +1,38 @@
 /* Add application styles & imports to this file! */
+/* Animaciones*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.clearence{
+  border:2px solid darkslategray;
+  background: rgb(204, 178, 32);
+}
+td{
+  vertical-align:middle;
+  text-align: center;
+}
